@@ -1,7 +1,7 @@
 # ⚙️ C++ Journey — A Systems-Level Learning Path
 
 > **Not a tutorial dump. Not a "learn C++ in 30 days" course.**
-> This repository is a **deep, internals-first journey into C++** — starting with Data Structures & Algorithms for competitive programming, then expanding into modern C++, tooling, systems programming, and applied domains like game development, cybersecurity, and networking.
+> This repository is a **deep, internals-first journey into C++** — covering modern C++, tooling, systems programming, DSA for competitive programming, and applied domains like game development, cybersecurity, networking, and embedded systems.
 
 If you are here to _"learn Qt"_ or _"learn a game engine"_, this repo is **not for you**.
 If you want to **understand C++ from the language up — how it thinks, how it compiles, how it fails — and build contest-sharp fundamentals along the way**, welcome.
@@ -12,13 +12,13 @@ If you want to **understand C++ from the language up — how it thinks, how it c
 
 This repository exists to:
 
-- Get **contest-ready fast** — DSA and STL fluency come first, before anything else
+- Get **contest-ready fast** — DSA and STL fluency are being tackled first, ahead of the roadmap's listed order, for an upcoming contest
 - Understand **modern C++ as it actually is today** (C++11 → C++23), not just "C with classes"
 - Learn **industry-standard tooling** — build systems, package managers, compilers, linters
 - Build **structured, real-world project layouts**, not single-file snippets
 - Get comfortable with **debugging and compile-time computation** — sanitizers, `constexpr`, templates
 - Integrate **third-party libraries** the way production codebases actually do
-- Apply C++ in **game development, cybersecurity, and networking** once the fundamentals are solid
+- Apply C++ in **game development, cybersecurity, networking, and embedded systems** once the fundamentals are solid
 
 This is a **learning log + reference + code lab**.
 
@@ -29,14 +29,14 @@ This is a **learning log + reference + code lab**.
 ```text
 Contests reward speed of execution.
 Systems work rewards depth of understanding.
-This repo builds both, in that order.
+This repo builds both — DSA first by necessity, the rest in listed order after.
 ```
 
 Principles followed in this repo:
 
 - ❌ No frameworks or engines without understanding what's underneath
 - ❌ No copy-pasted contest templates without knowing why each line exists
-- ✅ DSA and STL fluency first — everything else waits
+- ✅ DSA and STL fluency first in practice — everything else waits
 - ✅ Every C++ standard learned deliberately, not accidentally absorbed
 - ✅ Source, spec, and compiler-explorer curiosity over blog-post trust
 - ✅ Understanding "why", not just "how"
@@ -47,36 +47,39 @@ Principles followed in this repo:
 
 This repository covers **far more than contest prep alone**:
 
-- Data Structures & Algorithms — arrays, trees, graphs, DP, greedy, STL containers, fast I/O
 - Modern C++ standards — C++11, C++14, C++20, C++23 (move semantics, smart pointers, concepts, ranges, coroutines, modules)
 - Setup & industry-standard tooling — CMake, vcpkg/Conan, GCC/Clang/MSVC, linters, formatters
 - Structured project architecture — real multi-file layouts, not single `.cpp` snippets
 - Debugging & compile-time computation — GDB/LLDB, sanitizers, `constexpr`, templates, metaprogramming
 - Third-party libraries & frameworks — dependency management, integrating external libs
+- Data Structures & Algorithms — arrays, trees, graphs, DP, greedy, STL containers, fast I/O
 - Game development — engines, graphics APIs, real-time systems
 - Cybersecurity — memory-safety pitfalls, exploitation basics, secure coding
 - Networking — sockets, protocols, low-level network programming
+- Embedded systems — microcontrollers, memory-constrained programming, low-level hardware interaction
 
 Think of this as:
 
-> **Competitive Programming first, Systems Engineering after — through the lens of C++**
+> **Systems Engineering through the lens of C++ — with Competitive Programming pulled forward to meet a contest deadline**
 
 ---
 
 ## 📍 Current Focus
 
 ```text
-Phase 1 → Modern C++ Standards (C++11 → C++23)
-Phase 2 → Tooling & Industry Standards
-Phase 3 → Structured Projects
-Phase 4 → Debugging & Compile-Time Computation
-Phase 5 → Third-Party Libraries & Frameworks
-Phase 6 → DSA for Competitive Programming
-Phase 7 → Game Development
-Phase 8 → Cybersecurity
-Phase 9 → Networking
+Phase 1  → Modern C++ Standards (C++11 → C++23)
+Phase 2  → Tooling & Industry Standards
+Phase 3  → Structured Projects
+Phase 4  → Debugging & Compile-Time Computation
+Phase 5  → Third-Party Libraries & Frameworks
+Phase 6  → DSA for Competitive Programming   ← YOU ARE HERE (executed first, ahead of its listed order)
+Phase 7  → Game Development
+Phase 8  → Cybersecurity
+Phase 9  → Networking
 Phase 10 → Embedded
 ```
+
+> **Note:** the numbering above reflects the roadmap's conceptual structure, not the order phases are worked through. DSA (Phase 6) is being done first to prepare for an upcoming contest — the remaining phases will follow in their listed order afterward.
 
 See [`LEARNING_LOG.md`](./LEARNING_LOG.md) for the running journal and [`RESOURCES.md`](./RESOURCES.md) for the curated reading list per phase.
 
@@ -117,6 +120,29 @@ Then understand **why it broke** and what the compiler or runtime was doing.
 
 ---
 
+## 🐳 Development Environment
+
+This repository provides a reproducible C++ development environment using Docker and VS Code Dev Containers.
+
+The container includes:
+
+- GCC / G++
+- Clang / Clang++
+- CMake
+- Ninja
+- vcpkg
+- GDB
+- LLDB
+- clangd
+
+You do not need to manually install the C++ toolchain on your host machine.
+
+See [`DOCKER.md`](./DOCKER.md) for complete setup instructions, Docker commands, CMake presets, and debugging workflows.
+
+> **Recommended:** Use VS Code with the Dev Containers extension and reopen the repository inside the container.
+
+---
+
 ## 🚀 Who This Repo Is For
 
 This repository is ideal for:
@@ -140,7 +166,7 @@ After completing this repository, you should be able to:
 - Set up and configure a modern C++ project from scratch (CMake, package manager, CI)
 - Debug memory issues with sanitizers and a real debugger, not `printf`
 - Integrate third-party libraries into a structured project
-- Apply C++ fundamentals to game dev, security, or networking projects
+- Apply C++ fundamentals to game dev, security, networking, or embedded projects
 
 ---
 
@@ -152,7 +178,7 @@ This repository is:
 - Internals-focused
 - Performance-oriented
 
-It prioritizes **understanding over speed** and **depth over comfort** — except in Phase 1, where contest speed is the explicit goal.
+It prioritizes **understanding over speed** and **depth over comfort** — except where DSA is pulled forward for contest prep.
 
 ---
 
@@ -186,7 +212,7 @@ All notes, diagrams, and code are original work unless explicitly cited.
 ```text
 Most people use C++ to pass a contest or finish an assignment.
 Very few understand the language underneath.
-This repo is for the second group — after passing the contest.
+This repo is for the second group — DSA first, depth after.
 ```
 
 Happy solving, and happy compiling 🚀

@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Clang with LLDB",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/clang-debug/app",
+      "cwd": "${workspaceFolder}",
+      "args": [],
+      "stopOnEntry": false
+    }
+  ]
+}
