@@ -15,10 +15,13 @@ int main() {
     std::cout << "Element at index of arr " << i << ": " << arr[i] << std::endl;
   }
 
-  int arr2[5];
-  for (int j = 0; j < 5; j++) {
-    std::cout << "Element at index of arr2 " << j << ": " << arr2[j]
-              << std::endl;
+  int matrix[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+
+  for (int i = 0; i < 3; i++) {
+    for (int j = 0; j < 3; j++) {
+      std::cout << "Element at index (" << i << ", " << j
+                << "): " << matrix[i][j] << std::endl;
+    }
   }
 
   return 0;
